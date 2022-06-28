@@ -16,6 +16,7 @@ background-color:  #97cdde;
         font-family: $font1;
         font-size: 55px;
         margin-bottom: 30px;
+        margin-top: 15px;
         border: 2px solid rgb(0, 0, 0);
         border-radius: 200px;
         padding: 15px;
@@ -54,6 +55,48 @@ header ul li {
         background-image: linear-gradient(#97cdde, rgb(211, 227, 233));
     }
 }
+
+
+
+
+/*map*/
+
+
+$mapa1: (
+
+    blue1: rgb(161, 213, 226),
+    blue2: rgb(122, 178, 197),
+    blue3: rgb(83, 143, 212),
+    blue4: rgb(14, 114, 180)
+
+    );
+
+
+@each $blue1, $colors in $mapa1 {
+    .sc-#{$blue1} {
+
+        background-color: $colors;
+        color: white;
+        border-radius: 100px;
+    } 
+}
+
+.mapTest {
+    position: fixed;
+    top: 30%;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    border: 2px solid map-get($mapa1, blue4 );
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.493);
+    color: rgb(55, 83, 116);
+}
+
+
+
+
+/* fin map*/
 
 a {
     text-decoration: none;
@@ -164,4 +207,468 @@ background-color: #97cdde;
 .branding {
     font-style: italic;
     color: #ffffff;
+}
+
+/* Info */
+
+.infoM {
+    background-image: linear-gradient(white, #a2d5e9);
+    padding-bottom: 40px; 
+    border-bottom: 2px solid black;
+}
+
+.infoTittle {
+    font-family: $font2;
+    margin-top: 50px;
+    text-decoration: underline 2px;
+    font-size: 28px;
+}
+
+.infoPlans {
+    font-family: $font2;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.infoTable {
+    font-family: $font2;
+    margin-top: 40px;
+    width: 750px;
+    border: 2px solid #272727;
+    border-radius: 70px;
+    background-color: rgb(220, 252, 255);
+    border-collapse: collapse;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    @extend td ;
+    color: #4dc2e9;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+/* Works */
+
+.worksM {
+    background-image: linear-gradient(white, #a2d5e9); 
+    height: max-content;
+    border-bottom: 2px solid black;  
+    padding: 40px;
+}
+
+.find {
+    font-family: $font2;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 2px;
+    font-size: 25px;
+}
+
+.soon {
+    font-family: $font2;
+    background-color: #ffffff;
+    padding: 15px;
+    font-size: 23px;
+    border-radius: 200px;
+    border: 2px solid rgb(27, 10, 10);
+    margin-top: 40px;
+}
+
+/* About */
+
+.teamImage {
+    overflow: hidden;
+}
+
+.padre {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.aboutUs {
+    top: 40%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: inline-block;
+    width: 50vw;
+    border: 2px solid rgb(0, 0, 0);
+    padding: 25px;
+    font-family: $font2, cursive;
+    background-color: #e4e4e4c4;
+    opacity: 0,5;
+    border-radius: 100px
+}
+
+.us{
+    font-size: 2vw;
+    text-align: center;
+    text-decoration: underline;
+    color: #95c7d7;
+}
+
+.hello{
+    margin-top: 12px;
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+.where {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: $font2, cursive;
+    font-size: 38px;
+    left:450px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.blue {
+    height: 110px;
+    background-image: linear-gradient(whitesmoke, #90cce1 );
+}
+
+.backMap {
+    background-color: aliceblue;
+    height: 600px;
+}
+
+.imgMap {
+    margin-left: 50%;
+}
+
+.map {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    right: 70%;
+    width: 40vw;
+    padding: 15px;
+    background-image: linear-gradient(black, white,#95c7d7);
+    border: 100px solid rgb(0, 0, 0);
+    border-radius: 100px
+}
+
+.store{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid #95c7d7;
+    padding: 30px;
+    font-family: $font2, cursive;
+    background-color: #f5f5f580;
+    opacity: 0,5;
+    border-radius: 100px
+}
+
+
+/* Contact */
+
+.imgContact {
+    @extend .teamImage ;
+    height: 700px;
+    width: 1910px;
+}
+
+.contact {
+    position: absolute;
+    top: 40%;
+    left: 34% ;
+    font-family: $font2, cursive;
+    font-size: 25px;
+    
+}
+
+.form {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    right: 30%;
+    background-color: #a9d3e0;
+    background-image: linear-gradient(rgb(122, 179, 204), rgb(242, 248, 251));
+    padding: 20px;
+    font-family: $font2, cursive;
+    border-radius: 50px;
+    border: 7px solid rgb(35, 35, 33);
+    font-size: 16px;
+    line-height: 26px;
+    @extend .teamImage;
+}
+
+textarea , input {
+    border-radius: 15px;
+    border: 10px solid rgb(255, 255, 255);
+    background-color: #ffffff;
+}
+
+.contactButton {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 2px solid rgb(27, 10, 10);
+    height: 49px;
+    width: 70px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+@mixin place {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+@mixin design {
+    width: 210px;
+    height: 35px;
+    font-size: 16px;
+}
+
+.information {
+    @include place;
+}
+
+.in {
+    @include design;
+}
+
+/* Solo se aplicará a los tamaños indicados */
+
+@media only screen and (min-width: 1px) and (max-width: 476px) {
+
+    .hBar {
+        font-size: 14px;
+        font-family: $font2;
+        text-decoration: none;
+        }
+
+    .find {
+        font-family: $font2;
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 2px;
+        font-size: 21px ;
+        }
+
+    .soon {
+        font-family: $font2;
+        background-color: #ffffff;
+        padding: 15px;
+        font-size: 18px;
+        margin-left: 15px;
+        margin-right: 15px;
+        }
+
+    .lead {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 29px;
+        }
+
+    .footer-basic .us {
+        font-size: 21px;
+        }
+
+    .infoTable {
+        font-family: $font2;
+        font-size: 13px;
+        margin-top: 40px;
+        border-radius: 20px;
+        width: max-content;
+        border: 2px solid #272727;
+        background-color: rgb(220, 252, 255);
+        padding: 0px;
+        margin-left: 0px;
+        margin: 0 auto;
+        margin-top: 20px;
+        }
+
+    th, td {
+        padding: 1px;
+        text-align: start;
+        margin-left: 0px;
+        }
+
+    th {
+        font-size: 11px;
+        }
+
+    .searchbar:hover > .search_input{
+        width: max-content;
+        }
+
+    ::placeholder { font-size: 14px; }
+
+    .infoTittle {
+        font-size: 21px;
+        margin-left: 20px;
+        margin-right: 20px;
+        }
+
+    .infoPlans {
+        font-size: 19px;
+        margin-left: 20px;
+        margin-right: 20px;
+        }
+
+    .contact {
+            position: absolute;
+            top: 69%;
+            left: 34% ;
+            font-family: $font2, cursive;
+            font-size: 19px;
+            
+        }
+        
+    .form {
+            position: absolute;
+            top: 75%;
+            left: 30%;
+            right: 30%;
+            background-color: #a9d3e0;
+            background-image: linear-gradient(rgb(122, 179, 204), rgb(242, 248, 251));
+            padding: 20px;
+            font-family: $font2, cursive;
+            border-radius: 50px;
+            border: 2px solid rgb(35, 35, 33);
+            font-size: 12px;
+            line-height: 12px;
+            .in {
+                width: 30vw;
+            }
+        }
+    
+    textarea , input {
+            border-radius: 15px;
+            border: 10px solid rgb(255, 255, 255);
+            background-color: #ffffff;
+        }
+        
+    .contactButton {
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            border: 2px solid rgb(27, 10, 10);
+            height: 8vw;
+            width: 70px;
+            margin-top: 15px;
+            margin-left: 4%;
+        }
+        
+}
+
+@media only screen and (min-width: 476px) and (max-width: 676px) {
+
+.lead {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 45px;
+    }
+
+.infoTable {
+    font-size: 13px;
+    border-radius: 20px;
+    width: max-content;
+    padding: 0px;
+    margin-left: 0px;
+    margin: 0 auto;
+    margin-top: 20px;
+    }  
+
+.infoTittle {
+    font-size: 25px;
+    }
+
+.infoPlans {
+font-size: 21px;
+    }
+
+.find {
+    font-family: $font2;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 2px;
+    font-size: 22px ;
+    }
+
+.soon {
+    font-family: $font2;
+    background-color: #ffffff;
+    padding: 15px;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    }
+
+.infoTittle {
+        font-size: 24px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+.infoPlans {
+    font-size: 21px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+.hBar  {
+    font-size: 17px;
+    font-family: $font2;
+    text-decoration: none;
+    }
+
+    .contact {
+        position: absolute;
+        top: 60%;
+        left: 34% ;
+        font-family: $font2, cursive;
+        font-size: 22px;
+        
+    }
+    
+.form {
+        position: absolute;
+        top: 64%;
+        left: 30%;
+        right: 30%;
+        background-color: #a9d3e0;
+        background-image: linear-gradient(rgb(122, 179, 204), rgb(242, 248, 251));
+        padding: 20px;
+        font-family: $font2, cursive;
+        border-radius: 50px;
+        border: 2px solid rgb(35, 35, 33);
+        font-size: 15px;
+        line-height: 18px;
+        .in {
+            width: 30vw;
+        }
+    }
+
+textarea , input {
+        border-radius: 15px;
+        border: 10px solid rgb(255, 255, 255);
+        background-color: #ffffff;
+    }
+    
+.contactButton {
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border: 2px solid rgb(27, 10, 10);
+        height: 8vw;
+        width: 70px;
+        margin-top: 15px;
+        margin-left: 4%;
+    }
+    
 }
