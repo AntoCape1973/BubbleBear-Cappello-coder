@@ -65,44 +65,6 @@ header ul li a:hover {
   background-image: linear-gradient(#97cdde, rgb(211, 227, 233));
 }
 
-/*map*/
-.sc-blue1 {
-  background-color: rgb(161, 213, 226);
-  color: white;
-  border-radius: 100px;
-}
-
-.sc-blue2 {
-  background-color: rgb(122, 178, 197);
-  color: white;
-  border-radius: 100px;
-}
-
-.sc-blue3 {
-  background-color: rgb(83, 143, 212);
-  color: white;
-  border-radius: 100px;
-}
-
-.sc-blue4 {
-  background-color: rgb(14, 114, 180);
-  color: white;
-  border-radius: 100px;
-}
-
-.mapTest {
-  position: fixed;
-  top: 30%;
-  left: 25%;
-  right: 25%;
-  width: 50%;
-  border: 2px solid rgb(14, 114, 180);
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.493);
-  color: rgb(55, 83, 116);
-}
-
-/* fin map*/
 a {
   text-decoration: none;
   color: rgb(247, 247, 247);
@@ -216,8 +178,8 @@ a {
 }
 
 .branding {
-  font-style: italic;
-  color: #ffffff;
+  font-style: italic, bold;
+  color: rgb(255, 255, 255);
 }
 
 /* Info */
@@ -312,25 +274,31 @@ th {
   transform: translate(-50%, -50%);
   position: absolute;
   display: inline-block;
-  width: 50vw;
+  width: 85vw;
   border: 2px solid rgb(0, 0, 0);
   padding: 25px;
   font-family: "Comfortaa", cursive;
-  background-color: rgba(228, 228, 228, 0.768627451);
+  background-color: rgba(228, 228, 228, 0.5803921569);
   opacity: 0, 5;
   border-radius: 100px;
 }
 
+.aboutUs:hover {
+  background-color: #c4e3f0;
+}
+.aboutUs:hover .us {
+  color: #ffffff;
+}
+
 .us {
-  font-size: 2vw;
+  font-size: 30px;
   text-align: center;
   text-decoration: underline;
   color: #95c7d7;
 }
 
 .hello {
-  margin-top: 12px;
-  font-size: 1vw;
+  font-size: 19px;
   line-height: 2vw;
 }
 
@@ -356,6 +324,9 @@ th {
 
 .imgMap {
   margin-left: 50%;
+  margin-right: 50px;
+  width: 49vw;
+  height: 600px;
 }
 
 .map {
@@ -374,12 +345,21 @@ th {
   position: absolute;
   top: 20%;
   left: 50%;
-  border: 2px solid #95c7d7;
+  right: 30px;
+  border: 2px solid rgba(39, 39, 39, 0.5137254902);
   padding: 30px;
-  font-family: "Comfortaa", cursive;
+  font-family: "Comfortaa", italic;
+  color: rgb(41, 41, 41);
+  font-size: 18px;
   background-color: rgba(245, 245, 245, 0.5019607843);
   opacity: 0, 5;
   border-radius: 100px;
+}
+
+.store:hover {
+  background-color: #a4d0e2;
+  color: #ffffff;
+  border: 2px solid #000000;
 }
 
 /* Contact */
@@ -439,9 +419,9 @@ textarea, input {
 }
 
 /* Solo se aplicará a los tamaños indicados */
-@media only screen and (min-width: 1px) and (max-width: 476px) {
+@media only screen and (min-width: 0px) and (max-width: 476px) {
   .hBar {
-    font-size: 14px;
+    font-size: 10px;
     font-family: "Comfortaa";
     text-decoration: none;
   }
@@ -467,7 +447,7 @@ textarea, input {
   .lead {
     margin-left: 15px;
     margin-right: 15px;
-    font-size: 29px;
+    font-size: 2px;
   }
 
   .footer-basic .us {
@@ -532,7 +512,7 @@ textarea, input {
 
   .contact {
     position: absolute;
-    top: 69%;
+    top: 65%;
     left: 34%;
     font-family: "Comfortaa", cursive;
     font-size: 19px;
@@ -540,7 +520,7 @@ textarea, input {
 
   .form {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 30%;
     right: 30%;
     background-color: #a9d3e0;
@@ -571,8 +551,29 @@ textarea, input {
     margin-top: 15px;
     margin-left: 4%;
   }
+
+  .hello {
+    font-size: 9px;
+    line-height: 15px;
+  }
+
+  .store {
+    font-size: 12px;
+  }
+
+  .us {
+    font-size: 15px;
+  }
+
+  .where {
+    font-size: 25px;
+  }
 }
-@media only screen and (min-width: 476px) and (max-width: 676px) {
+@media only screen and (min-width: 476px) and (max-width: 850px) {
+  .hBar {
+    font-size: 20px;
+  }
+
   .lead {
     margin-left: 15px;
     margin-right: 15px;
@@ -637,7 +638,7 @@ textarea, input {
 
   .contact {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 34%;
     font-family: "Comfortaa", cursive;
     font-size: 22px;
@@ -645,7 +646,7 @@ textarea, input {
 
   .form {
     position: absolute;
-    top: 64%;
+    top: 55%;
     left: 30%;
     right: 30%;
     background-color: #a9d3e0;
@@ -675,5 +676,20 @@ textarea, input {
     width: 70px;
     margin-top: 15px;
     margin-left: 4%;
+  }
+
+  .hello {
+    font-size: 15px;
+    line-height: 15px;
+  }
+
+  .store {
+    font-size: 16px;
+    line-height: 15px;
+  }
+
+  .us {
+    font-size: 15px;
+    line-height: 15px;
   }
 }/*# sourceMappingURL=styles.css.map */

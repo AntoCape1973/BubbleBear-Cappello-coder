@@ -56,48 +56,6 @@ header ul li {
     }
 }
 
-
-
-
-/*map*/
-
-
-$mapa1: (
-
-    blue1: rgb(161, 213, 226),
-    blue2: rgb(122, 178, 197),
-    blue3: rgb(83, 143, 212),
-    blue4: rgb(14, 114, 180)
-
-    );
-
-
-@each $blue1, $colors in $mapa1 {
-    .sc-#{$blue1} {
-
-        background-color: $colors;
-        color: white;
-        border-radius: 100px;
-    } 
-}
-
-.mapTest {
-    position: fixed;
-    top: 30%;
-    left: 25%;
-    right: 25%;
-    width: 50%;
-    border: 2px solid map-get($mapa1, blue4 );
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.493);
-    color: rgb(55, 83, 116);
-}
-
-
-
-
-/* fin map*/
-
 a {
     text-decoration: none;
     color: rgb(247, 247, 247);
@@ -205,8 +163,8 @@ background-color: #97cdde;
 }
 
 .branding {
-    font-style: italic;
-    color: #ffffff;
+    font-style: italic, bold;
+    color: rgb(255, 255, 255);
 }
 
 /* Info */
@@ -302,25 +260,31 @@ th {
     transform: translate(-50%, -50%);
     position: absolute;
     display: inline-block;
-    width: 50vw;
+    width: 85vw;
     border: 2px solid rgb(0, 0, 0);
     padding: 25px;
     font-family: $font2, cursive;
-    background-color: #e4e4e4c4;
+    background-color: #e4e4e494;
     opacity: 0,5;
     border-radius: 100px
 }
 
+.aboutUs:hover {
+    background-color: #c4e3f0;
+    .us {
+        color: #ffffff
+    }
+}
+
 .us{
-    font-size: 2vw;
+    font-size: 30px;
     text-align: center;
     text-decoration: underline;
     color: #95c7d7;
 }
 
 .hello{
-    margin-top: 12px;
-    font-size: 1vw;
+    font-size: 19px;
     line-height: 2vw;
 }
 
@@ -346,6 +310,9 @@ th {
 
 .imgMap {
     margin-left: 50%;
+    margin-right: 50px;
+    width: 49vw;
+    height: 600px;;
 }
 
 .map {
@@ -364,12 +331,21 @@ th {
     position: absolute;
     top: 20%;
     left: 50%;
-    border: 2px solid #95c7d7;
+    right: 30px;
+    border: 2px solid #27272783;
     padding: 30px;
-    font-family: $font2, cursive;
+    font-family: $font2, italic;
+    color: rgb(41, 41, 41);
+    font-size: 18px;
     background-color: #f5f5f580;
     opacity: 0,5;
-    border-radius: 100px
+    border-radius: 100px;
+}
+
+.store:hover {
+    background-color: #a4d0e2;
+    color: #ffffff;
+    border: 2px solid #000000;
 }
 
 
@@ -443,10 +419,10 @@ textarea , input {
 
 /* Solo se aplicará a los tamaños indicados */
 
-@media only screen and (min-width: 1px) and (max-width: 476px) {
+@media only screen and (min-width: 0px) and (max-width: 476px) {
 
     .hBar {
-        font-size: 14px;
+        font-size: 10px;
         font-family: $font2;
         text-decoration: none;
         }
@@ -472,7 +448,7 @@ textarea , input {
     .lead {
         margin-left: 15px;
         margin-right: 15px;
-        font-size: 29px;
+        font-size: 2px;
         }
 
     .footer-basic .us {
@@ -523,7 +499,7 @@ textarea , input {
 
     .contact {
             position: absolute;
-            top: 69%;
+            top: 65%;
             left: 34% ;
             font-family: $font2, cursive;
             font-size: 19px;
@@ -532,7 +508,7 @@ textarea , input {
         
     .form {
             position: absolute;
-            top: 75%;
+            top: 70%;
             left: 30%;
             right: 30%;
             background-color: #a9d3e0;
@@ -564,9 +540,32 @@ textarea , input {
             margin-left: 4%;
         }
         
+    .hello {
+            font-size: 9px;
+            line-height: 15px;
+        }
+
+    .store {
+            font-size: 12px;
+        }
+
+    .us {
+        font-size: 15px;
+    }
+
+    .where {
+        font-size: 25px;
+    }
 }
 
-@media only screen and (min-width: 476px) and (max-width: 676px) {
+
+
+@media only screen and (min-width: 476px) and (max-width: 850px) {
+
+.hBar {
+    font-size: 20px;
+}
+
 
 .lead {
     margin-left: 15px;
@@ -630,7 +629,7 @@ font-size: 21px;
 
     .contact {
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 34% ;
         font-family: $font2, cursive;
         font-size: 22px;
@@ -639,7 +638,7 @@ font-size: 21px;
     
 .form {
         position: absolute;
-        top: 64%;
+        top: 55%;
         left: 30%;
         right: 30%;
         background-color: #a9d3e0;
@@ -670,5 +669,20 @@ textarea , input {
         margin-top: 15px;
         margin-left: 4%;
     }
+
+    .hello {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .store {
+        font-size: 16px;
+        line-height: 15px;
+    }
     
+    .us {
+        font-size: 15px;
+        line-height: 15px;
+    }
 }
+
